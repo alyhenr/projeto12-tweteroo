@@ -1,0 +1,27 @@
+{
+  "name": "projeto12-tweteroo",
+  "version": "1.0.0",
+  "description": "First back end project of the Driven Full Stack Bootcamp",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyhenr/projeto12-tweteroo.git"
+  },
+  "author": "Alysson Henrique R.A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alyhenr/projeto12-tweteroo/issues"
+  },
+  "homepage": "https://github.com/alyhenr/projeto12-tweteroo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}
