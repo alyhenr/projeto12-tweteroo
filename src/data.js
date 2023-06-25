@@ -1,9 +1,3 @@
-const baseUser = {
-    username: "",
-    avatar: "",
-};
+export const users = [];
 
-const baseTweet = {
-    username: "",
-    tweet: "",
-};
+export const tweets = [];
