@@ -12,7 +12,8 @@ app.listen(PORT, () => console.log(`Server on - PORT: ${PORT}`));
 app.post("/sign-up", (req, res) => {
     const { body: { username, avatar } } = req;
     try {
-        if (username.toString() !== username || avatar.toString() !== avatar)
+        if ((!username || !avatar) ||
+            (username.toString() !== username || avatar.toString() !== avatar))
             return res.status(400).send("Todos os campos são obrigatórios!");
 
         users.push({ username, avatar });
@@ -43,8 +44,7 @@ app.get("/tweets", (req, res) => {
     let start = 0, end = 10;
     if (page) {
         if (page >= 1) {
-            page = Math.floor(page);
-            end = page * 10;
+            end = Math.floor(page) * 10;
             start = end - 10;
         } else {
             res.status(400).send("Informe uma página válida!");
